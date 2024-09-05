@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua Biblioteca</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body>
+    <div class="flex flex-col h-screen bg-background text-foreground">
+        <header class="flex items-center justify-between p-4 bg-card">
+            <h1 class="text-xl font-bold">Sua Biblioteca</h1>
+            <div class="flex items-center space-x-2">
+                <button class="bg-secondary text-secondary-foreground p-2 rounded-full">+</button>
+            </div>
+        </header>
+
+        <main class="flex flex-grow p-4">
+            <aside class="w-1/4 bg-card p-4 rounded-lg">
+                <nav>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-muted hover:text-primary">Início</a></li>
+                        <li><a href="#" class="text-muted hover:text-primary">Buscar</a></li>
+                        <li><a href="#" class="text-muted hover:text-primary">Playlists</a></li>
+                        <li><a href="#" class="text-muted hover:text-primary">Artistas</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="flex-grow bg-card p-4 rounded-lg">
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/150x150" alt="Album Cover" class="rounded-lg" />
+                    <div>
+                    
+                        <h3 class="text-muted">LEAL - Rock Danger - 2023 - 12 músicas, 29 min 27s</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center my-4">
+                    <button id="prev" class="bg-secondary text-secondary-foreground p-2 rounded-full mx-2">
+                        <span class="material-icons">skip_previous</span>
+                    </button>
+                    <button id="play" class="bg-primary text-primary-foreground p-2 rounded-full">
+                        <span class="material-icons">play_arrow</span>
+                    </button>
+                    <button id="next" class="bg-secondary text-secondary-foreground p-2 rounded-full mx-2">
+                        <span class="material-icons">skip_next</span>
+                    </button>
+                </div>
+
+                <div class="space-y-2" id="playlist">
+                    <!-- As músicas serão carregadas dinamicamente aqui -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-card p-4">
+            <div class="flex items-center justify-between">
+                <span id="current-track">Nenhuma música tocando</span>
+                <span class="text-muted" id="current-time">0:00</span>
+            </div>
+            <div class="flex items-center justify-between mt-2">
+                <input type="range" id="progress-bar" value="0" class="w-full">
+            </div>
+        </footer>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
